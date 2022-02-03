@@ -8,6 +8,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 public class MainActivity extends AppCompatActivity {
 
     DatePicker datePicker; // datePicker - 날짜를 선택하는 달력
@@ -28,5 +30,11 @@ public class MainActivity extends AppCompatActivity {
        viewDatePick = (TextView) findViewById(R.id.viewDatePick);
        edtDiary = (EditText) findViewById(R.id.edtDiary);
        btnSave = (Button) findViewById(R.id.btnSave);
+
+       //오늘 날짜를 받게해주는 Calender 친구들
+       Calendar c = Calendar.getInstance();
+       int cYear = c.get(Calendar.YEAR);
+       int cMonth = c.get(Calendar.MONTH);
+       int cDay = c.get(Calendar.DAY_OF_MONTH);
     }
 }
